@@ -1,6 +1,7 @@
 {
 	"name": "crontimex",
 	"version": "0.0.2",
+	"description": "None-dependencies Cron Time Expression Generator/Builder written in Typescript",
 	"scripts": {
 		"dev": "vite dev",
 		"postbuild": "touch ./docs/.nojekyll",
