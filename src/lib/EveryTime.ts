@@ -9,8 +9,8 @@ type EveryTimeConfig = {
  * Every Time Class
  */
 class EveryTime {
-    public timeInterval: TimeInterval = 1;
-    public config: EveryTimeConfig = {};
+    timeInterval: TimeInterval = 1;
+    config: EveryTimeConfig = {};
 
     /**
      *
