@@ -9,7 +9,7 @@ type EveryTimeConfig = {
  * Every Time Class
  */
 class EveryTime {
-    timeInterval: TimeInterval = 1;
+    timeInterval: TimeInterval;
     config: EveryTimeConfig = {};
 
     /**
@@ -18,6 +18,7 @@ class EveryTime {
      * @param {{}} config
      */
     constructor(every: TimeInterval, config: EveryTimeConfig = {}) {
+        this.timeInterval = 1;
         if (every === "even") every = 2;
         this.timeInterval = every;
 
