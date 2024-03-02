@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.BiAbxgMl.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.56lwhkRy.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.OSwvBh1c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.CtbWrGNo.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.D1-6YsL5.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.CF9aiORR.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DYTP8ZfA.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.ST4V9xcR.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.DgL-UiFn.js"><title>CronTimex Home &amp; Docs</title><!-- HEAD_svelte-1az4h7s_START --><meta property="og:type" content="crontimex home"><meta property="og:title" content="CronTimex home"><!-- HEAD_svelte-1az4h7s_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div>  <header class="svelte-1ryygst"><nav class="svelte-1ryygst"><div data-svelte-h="svelte-1irmtot"><strong class="svelte-1ryygst">CronTimex</strong> <em class="svelte-1ryygst">Cron Time Expression Generator</em></div> <a href="./" title="CronTimex Docs" class="svelte-1ryygst active" data-svelte-h="svelte-1gsw661">CronTimex Docs</a></nav></header> <main class="svelte-1ryygst"> <h1 data-svelte-h="svelte-1dm19y3">CronTimex</h1> <p data-svelte-h="svelte-1mepx9w">Cron Time Expression Generator/Builder written in Typescript. It is a non-class-based port of <a href="https://github.com/trapcodeio/cron-time" rel="nofollow">Cron-Time</a>. Every functionality remains the same as in <code>Cron-Time</code>; it is just not class-based.</p> <p data-svelte-h="svelte-hps3gk">Tested on <a href="https://crontab.guru" rel="nofollow">CronTab.Guru</a></p> <h3 data-svelte-h="svelte-1tlikxz">Install</h3> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #A6ACCD">npm install crontimex</span></span></code></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-8lmj7z">OR</p> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #A6ACCD">yarn add crontimex</span></span></code></pre><!-- HTML_TAG_END --> <h2 data-svelte-h="svelte-dnbfhr">Usage</h2> <p data-svelte-h="svelte-xxzurk">Once you’ve added <code>crontimex</code> to your project, use it as shown below, in your project:</p> <h3 data-svelte-h="svelte-14n65fz">+page.svelte (without page.ts for data)</h3> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #767C9DB0; font-style: italic">// Javascript</span></span>
+<span class="line"><span style="color: #91B4D5">const</span><span style="color: #A6ACCD"> &#123; </span><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD"> &#125; </span><span style="color: #91B4D5">=</span><span style="color: #A6ACCD"> </span><span style="color: #E4F0FBD0">require</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// OR</span></span>
+<span class="line"><span style="color: #91B4D5">const</span><span style="color: #A6ACCD"> &#123; default: </span><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD"> &#125; </span><span style="color: #91B4D5">=</span><span style="color: #A6ACCD"> </span><span style="color: #E4F0FBD0">require</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Typescript</span></span>
+<span class="line"><span style="color: #5DE4C7">import </span><span style="color: #A6ACCD">&#123;</span><span style="color: #5DE4C7"> </span><span style="color: #ADD7FF">CronTimex</span><span style="color: #5DE4C7"> </span><span style="color: #A6ACCD">&#125;</span><span style="color: #5DE4C7"> </span><span style="color: #A6ACCD">from</span><span style="color: #5DE4C7"> </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">;</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// OR</span></span>
+<span class="line"><span style="color: #5DE4C7">import </span><span style="color: #ADD7FF">CronTimex</span><span style="color: #5DE4C7"> </span><span style="color: #A6ACCD">from</span><span style="color: #5DE4C7"> </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">;</span></span></code></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-12lgspi">The <code>CronTimex</code> contains all the methods for generating cron expressions.
+it is the default export of the package and also has a named export called <code>CronTimex</code></p> <h3 data-svelte-h="svelte-1wqhqwh">Setup</h3> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyMinute</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// * * * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyHour</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 * * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyDay</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyDayAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">6</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 6 * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyDayAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">6</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">15</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 15 6 * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everySunday</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * SUN</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everySundayAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">4</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 30 4 * * SUN</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekDay</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 1-5</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// from Monday to Friday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekDayAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">1</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 30 1 * * 1-5</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 1:30 AM from Monday to Friday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekend</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 6,0</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// on Saturday and Sunday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekendAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">1</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 30 1 * * 6,0</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 1:30 AM on Saturday and Sunday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// E.T.C</span></span></code></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-1sz8a8y">For <code>everyWeekDay</code> and <code>everyWeekend</code> there is also an option to change the starting day.</p> <p data-svelte-h="svelte-1dj0e5u">By default, week days is from <strong>Monday</strong> to <strong>Friday</strong> while weekend days are <strong>Saturdays</strong> and <strong>Sundays</strong></p> <p data-svelte-h="svelte-j6m5i6">This can be changed like so:</p> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekDay</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">sunday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">thursday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 0-4</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// from Sunday to Thursday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekDayAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">1</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">sunday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">thursday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 30 1 * * 0-4</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 1:30 AM from Sunday to Thursday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekend</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">friday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">saturday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 5,6</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// on Friday and Saturday</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">everyWeekendAt</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">1</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">friday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">saturday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 30 1 * * 5,6</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// 1:30 AM on Friday and Saturday</span></span></code></pre><!-- HTML_TAG_END --> <p data-svelte-h="svelte-vtemtw">Note: if a <code>startDay</code> is specified then an <code>endDay</code> must be specified also, else it will use the default values which
+may not tally with your new <code>$startDay</code></p> <p data-svelte-h="svelte-1jyljg9">Every method of <code>CronTimex</code> returns exactly what its name says.</p> <h3 data-svelte-h="svelte-smyktg">onSpecificDays and onSpecificDaysAt</h3> <p data-svelte-h="svelte-j7olbl">To target specific days</p> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">onSpecificDays</span><span style="color: #A6ACCD">([</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">sunday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">tuesday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">thursday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">]); </span><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 0,2,4</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// With time</span></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">onSpecificDaysAt</span><span style="color: #A6ACCD">([</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">sunday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">tuesday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">, </span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">thursday</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">], </span><span style="color: #5DE4C7">3</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">30</span><span style="color: #A6ACCD">); </span><span style="color: #767C9DB0; font-style: italic">// 0 0 * * 0,2,4</span></span></code></pre><!-- HTML_TAG_END --> <h3 data-svelte-h="svelte-160u4va">Every Nth Time</h3> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #91B4D5">const</span><span style="color: #A6ACCD"> </span><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD"> </span><span style="color: #91B4D5">=</span><span style="color: #A6ACCD"> </span><span style="color: #E4F0FBD0">require</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">5</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">minutes</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every Five Minutes</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">2</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">hours</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every 2 Hours</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">7</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">days</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every 7 Days</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">7</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">days</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">9</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">5</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every 7 days at 9:05</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">even</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">hours</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every Even Hours</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// * */2 * * *</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">every</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">uneven</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">hours</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Every Uneven Hours</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// * 1-23/2 * * *</span></span></code></pre><!-- HTML_TAG_END --> <h3 data-svelte-h="svelte-1s9wmxe">Between</h3> <!-- HTML_TAG_START --><pre class="shiki poimandres" style="background-color: #1b1e28" tabindex="0"><code><span class="line"><span style="color: #91B4D5">const</span><span style="color: #A6ACCD"> &#123; </span><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD"> &#125; </span><span style="color: #91B4D5">=</span><span style="color: #A6ACCD"> </span><span style="color: #E4F0FBD0">require</span><span style="color: #A6ACCD">(</span><span style="color: #A6ACCD">&#39;</span><span style="color: #5DE4C7">crontimex</span><span style="color: #A6ACCD">&#39;</span><span style="color: #A6ACCD">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E4F0FB">CronTimex</span><span style="color: #A6ACCD">.</span><span style="color: #E4F0FBD0">between</span><span style="color: #A6ACCD">(</span><span style="color: #5DE4C7">1</span><span style="color: #A6ACCD">, </span><span style="color: #5DE4C7">4</span><span style="color: #A6ACCD">).</span><span style="color: #E4F0FBD0">days</span><span style="color: #A6ACCD">();</span></span>
+<span class="line"><span style="color: #767C9DB0; font-style: italic">// Between  1 - 4 th day of the month</span></span></code></pre><!-- HTML_TAG_END --> <h3 data-svelte-h="svelte-37pozg">All Functions</h3> <p data-svelte-h="svelte-1qt4vpy"><code>every</code></p> <p data-svelte-h="svelte-1di5hi9"><code>between</code></p> <p data-svelte-h="svelte-14gah4y"><code>everyMinute</code></p> <p data-svelte-h="svelte-74dqr8"><code>everyHour</code></p> <p data-svelte-h="svelte-su3mpq"><code>everyHourAt(minuteOfTheHour)</code></p> <p data-svelte-h="svelte-11nifn8"><code>everyDay</code></p> <p data-svelte-h="svelte-1iioa5b"><code>everyDayAt(hoursOfTheDay)</code></p> <p data-svelte-h="svelte-1xcrhca"><code>everySunday</code></p> <p data-svelte-h="svelte-29eksb"><code>everySundayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-bg5kke"><code>everyMonday</code></p> <p data-svelte-h="svelte-1lj77y3"><code>everyMondayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-r6ywa7"><code>everyTuesday</code></p> <p data-svelte-h="svelte-9gs4sg"><code>everyTuesdayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-1ia8fkm"><code>everyWednesday</code></p> <p data-svelte-h="svelte-1k5tl31"><code>everyWednesdayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-sg0kl4"><code>everyThursday</code></p> <p data-svelte-h="svelte-1avd289"><code>everyThursdayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-1gu4fp9"><code>everyFriday</code></p> <p data-svelte-h="svelte-1wjkm38"><code>everyFridayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-1alq9m1"><code>everySaturday</code></p> <p data-svelte-h="svelte-1029gmk"><code>everySaturdayAt(hours, minutes?)</code></p> <p data-svelte-h="svelte-1jvdeqi"><code>everyWeek</code></p> <p data-svelte-h="svelte-kz9wyj"><code>everyWeekAt(days, hours?, minutes?)</code></p> <p data-svelte-h="svelte-xj30dc"><code>everyWeekDay</code></p> <p data-svelte-h="svelte-1gyvpwi"><code>everyWeekDayAt(hours, minutes?, startDay?, endDay?)</code></p> <p data-svelte-h="svelte-1faqa7t"><code>everyWeekend</code></p> <p data-svelte-h="svelte-sgr8rb"><code>everyWeekendAt(hours, minutes?, startDay?, endDay?)</code></p> <p data-svelte-h="svelte-evkqlk"><code>everyMonth</code></p> <p data-svelte-h="svelte-ko75ab"><code>everyMonthOn(days, hours?, minutes?)</code></p> <p data-svelte-h="svelte-13franf"><code>everyYear</code></p> <p data-svelte-h="svelte-t8meca"><code>everyYearIn(months, days?, hours?, minutes?)</code></p> <p data-svelte-h="svelte-114fwnd"><code>onSpecificDays(days)</code></p> <p data-svelte-h="svelte-1spskte"><code>onSpecificDaysAt(days, hour, minutes?)</code></p> </main> 
+			
+			<script>
+				{
+					__sveltekit_1qiy37c = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.56lwhkRy.js"),
+						import("./_app/immutable/entry/app.D1-6YsL5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
