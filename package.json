@@ -1,6 +1,6 @@
 {
 	"name": "crontimex",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "None-dependencies Cron Time Expression Generator/Builder written in Typescript",
 	"scripts": {
 		"dev": "vite dev",
