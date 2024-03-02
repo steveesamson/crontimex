@@ -33,8 +33,6 @@ import CronTimex from 'crontimex';
 The `CronTimex` contains all the methods for generating cron expressions.
 it is the default export of the package and also has a named export called `CronTimex`
 
-### Setup
-
 ```javascript
 CronTimex.everyMinute();
 // * * * * *
