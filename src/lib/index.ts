@@ -1,8 +1,6 @@
 import Helpers, { Days } from "./helpers.js";
 import EveryTime from "./EveryTime.js";
 
-// type MinutesOfTheHour = number | number[];
-// type HoursOfTheDay = number | number[];
 
 /**
  * Cron Time Object
